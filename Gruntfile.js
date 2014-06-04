@@ -99,6 +99,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('build', ['clean','sass','uglify','assemble','copy']);
   grunt.registerTask('default', ['build','watch']);

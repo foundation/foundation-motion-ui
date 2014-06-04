@@ -1,6 +1,6 @@
 @import "settings";
 @import "foundation";
-@import "dashboard";
+@import "animate";
 
 // Or selectively include components
 // @import
@@ -39,3 +39,33 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.block {
+	width: rem-calc(200);
+	height: rem-calc(200);
+	background: #000;
+	display: inline-block;
+	margin-bottom: rem-calc(15);
+	&::after {
+		content: "";
+		width: 100%;
+		display: table;
+		clear: both;
+	}
+	
+}
+
+.content-wrap {
+	@include grid-row();
+	// @include vertical-align;
+}
+
+

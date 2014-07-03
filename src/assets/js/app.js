@@ -1,10 +1,10 @@
 $(document).foundation();
 
-$('.trigger-slide-in.button').click(function(){
-	$(this).closest('li').find('.block').addClass('animated slide-in');
-	setTimeout(function () { 
-	  $('.block').removeClass('animated slide-in');
-	}, 2000);
+$('.trigger.button').click(function(){
+	$(this).closest('li').find('.block').toggleClass('animated');
+	// setTimeout(function () { 
+	//   $('.block').removeClass('animated slide-in');
+	// }, 2000);
 });
 
 $('.trigger-slide-out.button').click(function(){
